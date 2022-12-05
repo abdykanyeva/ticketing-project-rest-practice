@@ -38,7 +38,7 @@ public class ProjectController {
     @PostMapping
     public ResponseEntity<ResponseWrapper> createProject(@RequestBody  ProjectDTO projectDTO){
         projectService.save(projectDTO);
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body(new ResponseWrapper("Project is created", HttpStatus.CREATED );
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(new ResponseWrapper("Project is created", HttpStatus.CREATED ));
     }
 
 
