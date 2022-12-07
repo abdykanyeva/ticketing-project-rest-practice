@@ -4,8 +4,8 @@ package com.cydeo.controller;
 import com.cydeo.dto.ResponseWrapper;
 import com.cydeo.dto.UserDTO;
 import com.cydeo.repository.UserRepository;
+import com.cydeo.service.KeycloakService;
 import com.cydeo.service.UserService;
-import net.bytebuddy.asm.Advice;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,12 +18,14 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-    private final UserRepository userRepository;
 
 
-    public UserController(UserService userService, UserRepository userRepository) {
+
+
+    public UserController(UserService userService) {
         this.userService = userService;
-        this.userRepository = userRepository;
+
+
     }
 
 
